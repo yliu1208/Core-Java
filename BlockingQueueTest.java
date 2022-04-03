@@ -8,7 +8,9 @@ import java.util.stream.*;
 public class BlockingQueueTest {
     private static final int FILE_QUEUE_SIZE = 10; 
     private static final int SEARCH_THREADS = 100; 
+    // 整理有关Path的知识
     private static final Path DUMMY = Path.of(""); 
+    // ArrayBlockingQueue: https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/concurrent/ArrayBlockingQueue.html
     private static BlockingQueue<Path> queue = new ArrayBlockingQueue<>(FILE_QUEUE_SIZE); 
 
     public static void main(String[] args) {
@@ -58,7 +60,6 @@ public class BlockingQueueTest {
      * @throws IOException
      * @throws InterruptedException
      */
-
     public static void enumerate(Path directory) throws IOException, InterruptedException {
         try (Stream<Path> children = Files.list(directory)) {
             for(Path child : children.collect(Collectors.toList())) {
