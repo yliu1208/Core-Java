@@ -12,6 +12,10 @@ When should you call `signalAll`? The rule of thumb is to call `signalAll` whene
 
 Another method, `signal`, unblocks **only a single thread from the wait set, chosen at random**.
 
+## 12.5 Thread-Safe Collections
+
+### 12.5.1 Blocking Queues
+
 ## 12.6 Tasks and Thread Pools
 
 ### 12.6.1 Callables and Futures
