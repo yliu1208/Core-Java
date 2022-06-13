@@ -8,3 +8,8 @@ If you write a class **with no constructors whatsoever**, then a no-argument con
 
 If a class supplies at least one constructor but does not supply a no-argument constructor, **it is illegal to construct objects without supplying arguments**.  
 
+## 4.7 Records
+
+## 4.8 Packages
+### 4.8.2 Class Importation
+A class can use all classes from its own package and all *public* classes from other packages. 
